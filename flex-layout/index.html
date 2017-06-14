@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>flex-layout</title>
+		<style type="text/css">
+			body{
+				margin: 0;
+			    display: flex;
+			    flex-direction: column;
+			    position: fixed;
+			    left: 0;
+			    top: 0;
+			    right: 0;
+			    bottom: 0;
+			    background: #bcd3bc;
+			}
+			header{
+				height: 60px;
+				background: #000;
+				flex: none;
+			}
+			.main{
+				display: flex;
+				flex: auto;
+				overflow: auto;
+			}
+			.left-menu{
+				width: 60px;
+				background: #329632;
+				margin-right: 20px;
+				flex: none;
+			}
+			.left-second-menu{
+				width: 15.6%;
+			    margin: 28px 20px 0 0;
+			    background: #fff;
+			    min-width: 224px;
+			    overflow: auto;
+			}
+			.content{
+				margin: 28px 8% 26px 0;
+			    background: #fff;
+			    flex: auto;
+			    overflow: auto;
+			}
+			.lsm-ul{
+				list-style: none;
+			    width: 100%;
+			    overflow: hidden;
+			    margin-top: 20px;
+			}
+			.lsm-ul>li{
+				border: 1px solid #BFBFBF;
+			    margin: 10px 0;
+			    position: relative;
+			    cursor: pointer;
+			    background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<header></header>
+		<div class="main">
+			<nav class="left-menu">
+			</nav>
+			<nav class="left-second-menu">
+				<ul class="lsm-ul">
+					<li>11111111111</li>
+					<li>11111111111</li>
+					<li>11111111111</li>
+					<li>11111111111</li>
+				</ul>
+			</nav>
+			<div class="content"></div>
+		</div>
+	</body>
+</html>
