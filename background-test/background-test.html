@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.wrapper{
+				width: 900px;
+			    position: relative;
+			}
+			.clearfix:after{
+				content: '';
+				display: block;
+				line-height: 0;
+				height: 0;
+				clear: both;
+			}
+			.cell{
+			    padding: 0 20px;
+			    float: left;
+			    width: 10%;
+			    box-sizing: border-box;
+			}
+			.aa{
+				    height: 200px;
+    				border: 1px dashed #000;
+			}
+			.bb{
+				width: 33%;
+			    height: 100px;
+			    background: blue;
+			}
+			.line{
+			    width: 101%;
+			    height: 0;
+			    border-bottom: 2px dashed #000;
+			    position: absolute;
+			    left: -5px;
+			    top: 41.66%;
+			    z-index: -1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper clearfix">
+			<div class="line"></div>
+			<div class="cell">
+				<div class="aa">
+					<div class="bb">
+					</div>
+				</div>
+			</div>
+			<div class="cell">
+				<div class="aa">
+					<div class="bb">
+					</div>
+				</div>
+			</div>
+			<div class="cell">
+				<div class="aa">
+					<div class="bb">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

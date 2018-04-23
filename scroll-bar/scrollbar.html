@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>scroll bar</title>
+		<style type="text/css">
+			html {
+			  overflow-y: scroll;
+			}
+			
+			:root {
+			  overflow-y: auto;
+			  overflow-x: hidden;
+			}
+			
+			:root body {
+			  position: absolute;
+			}
+			
+			body {
+			  width: 100vw;
+			  overflow: hidden;
+			}
+			body{
+				margin: 0;
+			}
+			.items{
+				width: 1000px;
+				margin: 0 auto;
+			}
+			.item{
+				height: 200px;
+				background: greenyellow;
+				margin-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="outer">
+			<div class="items">
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+			
+		</div>
+	</body>
+</html>

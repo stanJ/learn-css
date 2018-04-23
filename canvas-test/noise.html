@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>noise</title>
+		<style type="text/css">
+			.noise{
+				height: 500px;
+				background-color: #333;
+				position: relative;
+			}
+			.noise>canvas{
+				height: 100%;
+				width: 100%;
+				opacity: .2;
+			}
+			.noise::before{
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .4));
+			}
+		</style>
+	</head>
+	<body>
+		<div class="noise">
+			<canvas id="noiseCanvas"></canvas>
+		</div>
+		<script type="text/javascript">
+			var canvasNoise = (function(document, window){
+				var defaults = {
+					width: 0,
+					height: 0,
+					pieceWidth: 100, 
+					pieceHeight: 100,
+					pixelWidth: 1,
+					pixelHeight: 1
+				};
+				var canvasPiece = function(options){
+					var canvas = document.createElement('canvas');
+					var context = canvas.getContext('2d');
+					var pieceWidth = options.pieceWidth;
+					var pieceHeight = options.pieceHeight;
+					var pixelWidth = options.pixelWidth;
+					var pixelHeight = options.pixelHeight;
+					
+					for(var y = 0; y < pieceHeight; y += pixelHeight){
+						for(var x = 0; x < pieceWidth; x += pixelWidth){
+							var color = Math.floor(Math.random() * 150);
+							context.fillStyle = `rgba(${color}, ${color}, ${color}, 1)`;
+							context.fillRect(x, y, pixelWidth, pixelHeight);
+						}
+					}
+					return canvas;
+				};
+				
+				var draw = function(canvas, options){
+					var piece = canvasPiece(options);
+					var context = canvas.getContext('2d');
+					var width = options.width;
+					var height = options.height;
+					var pieceWidth = options.pieceWidth, pieceHeight = options.pieceHeight;
+					var tileNumH = Math.ceil(width / pieceWidth);
+					var tileNumV = Math.ceil(height / pieceHeight);
+					
+					for(var x = 0; x < tileNumH; x++){
+						for(var y = 0; y < tileNumV; y++){
+							context.drawImage(piece, x * pieceWidth, y * pieceHeight);
+						}
+					}
+				};
+				
+				return function(canvas, options){
+					var params = {};
+					options = options || {};
+					for(var key in defaults){
+						params[key] = options[key] || defaults[key];
+					}
+					if(!params.width){
+						params.width = canvas.clientWidth;
+					}
+					if(!params.height){
+						params.height = canvas.clientHeight;
+					}
+					
+					canvas.width = params.width;
+					canvas.height = params.height;
+					
+					draw(canvas, params);
+				}
+			})(document, window);
+			
+			var canvas = document.querySelector('#noiseCanvas');
+			canvasNoise(canvas, {
+				pieceWidth: 300,
+				pieceHeight: 150
+			});
+		</script>
+	</body>
+</html>

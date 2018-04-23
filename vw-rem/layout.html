@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>vw-rem</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+		<style type="text/css">
+			html {
+			    font-size: 16px;
+			}
+			
+			@media screen and (min-width: 375px) {
+			    html {
+			        /* iPhone6的375px尺寸作为16px基准，414px正好18px大小, 600 20px */
+			        font-size: calc(100% + 2 * (100vw - 375px) / 39);
+			        font-size: calc(16px + 2 * (100vw - 375px) / 39);
+			    }
+			}
+			@media screen and (min-width: 414px) {
+			    html {
+			        /* 414px-1000px每100像素宽字体增加1px(18px-22px) */
+			        font-size: calc(112.5% + 4 * (100vw - 414px) / 586);
+			        font-size: calc(18px + 4 * (100vw - 414px) / 586);
+			    }
+			}
+			@media screen and (min-width: 600px) {
+			    html {
+			        /* 600px-1000px每100像素宽字体增加1px(20px-24px) */
+			        font-size: calc(125% + 4 * (100vw - 600px) / 400);
+			        font-size: calc(20px + 4 * (100vw - 600px) / 400);
+			    }
+			}
+			@media screen and (min-width: 1000px) {
+			    html {
+			        /* 1000px往后是每100像素0.5px增加 */
+			        font-size: calc(137.5% + 6 * (100vw - 1000px) / 1000);
+			        font-size: calc(22px + 6 * (100vw - 1000px) / 1000);
+			    }
+			}
+		</style>
+	</head>
+	<body>
+		<div class="word">hh</div>
+		<div class="img-wrapper">
+			<a href="#" class="img-outer">
+				<img src="img/0.jpg"/>
+			</a>
+		</div>
+		<div class="slide">
+			<ol class="slide__ol">
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/1.jpg" alt="宠物天王" class="slide__img" />
+						<figcaption class="slide__caption">宠物天王</figcaption>
+					</a>
+				</li>
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/2.jpg" alt="娱乐之荒野食神" class="slide__img" />
+						<figcaption class="slide__caption">娱乐之荒野食神</figcaption>
+					</a>
+				</li>
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/3.jpg" alt="信仰诸天" class="slide__img" />
+						<figcaption class="slide__caption">信仰诸天</figcaption>
+					</a>
+				</li>
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/4.jpg" alt="白袍总管" class="slide__img" />
+						<figcaption class="slide__caption">白袍总管</figcaption>
+					</a>
+				</li>
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/5.jpg" alt="诸天最强BOSS" class="slide__img" />
+						<figcaption class="slide__caption">诸天最强BOSS</figcaption>
+					</a>
+				</li>
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/6.jpg" alt="火影之活久见" class="slide__img" />
+						<figcaption class="slide__caption">火影之活久见</figcaption>
+					</a>
+				</li>
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/7.jpg" alt="青叶灵异事务所" class="slide__img" />
+						<figcaption class="slide__caption">青叶灵异事务所</figcaption>
+					</a>
+				</li>
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/1.jpg" alt="宠物天王" class="slide__img" />
+						<figcaption class="slide__caption">宠物天王</figcaption>
+					</a>
+				</li>
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/2.jpg" alt="娱乐之荒野食神" class="slide__img" />
+						<figcaption class="slide__caption">娱乐之荒野食神</figcaption>
+					</a>
+				</li>
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/3.jpg" alt="信仰诸天" class="slide__img" />
+						<figcaption class="slide__caption">信仰诸天</figcaption>
+					</a>
+				</li>
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/4.jpg" alt="白袍总管" class="slide__img" />
+						<figcaption class="slide__caption">白袍总管</figcaption>
+					</a>
+				</li>
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/5.jpg" alt="诸天最强BOSS" class="slide__img" />
+						<figcaption class="slide__caption">诸天最强BOSS</figcaption>
+					</a>
+				</li>
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/6.jpg" alt="火影之活久见" class="slide__img" />
+						<figcaption class="slide__caption">火影之活久见</figcaption>
+					</a>
+				</li>
+				<li class="slide__li">
+					<a href="#" class="slide__a">
+						<img src="img/7.jpg" alt="青叶灵异事务所" class="slide__img" />
+						<figcaption class="slide__caption">青叶灵异事务所</figcaption>
+					</a>
+				</li>
+			</ol>
+		</div>
+	</body>
+</html>
