@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>percent flex</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    .grid{
+      display: flex;
+    }
+    .grid-cell{
+      flex: 1;
+      background: lightgreen;
+      text-align: center;
+      margin-right: 10px;
+    }
+    .grid-cell:last-of-type{
+      margin-right: 0;
+    }
+    .u-1of4{
+      flex: 0 0 25%;
+    }
+    .u-1of3{
+      flex: 0 0 33.333%;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="grid-cell u-1of4">aaa</div>
+    <div class="grid-cell">aaa</div>
+    <div class="grid-cell u-1of3">aaa</div>
+  </div>
+</body>
+</html>
