@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>width test</title>
+  <style>
+    .outer{
+      width: 100px;
+    }
+    .inner{
+      white-space: nowrap;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo">
+    <table>
+      <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+      </tr>
+    </table>
+    <span>一点文字</span>
+    <div class="outer">
+      <span>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+      <span>是的放假啊上asdfasdfadfasdfasdfasfafadfasfasfasf看风景啊放假啊快点放假啊卡积分卡积分卡就看见啊安静的发卡量附近的</span>
+      <span class="inner">是的放假啊上看风景啊放假啊快点放假啊卡积分卡积分卡就看见啊安静的发卡量附近的</span>
+    </div>
+    <button>按钮1</button>
+    <input type="button" value="按钮2">
+    <br>
+    <div style="display: inline-block">
+      我是文本
+      <span>我在inline标签内</span>
+      <button>我是按钮</button>
+      <img src="../img/shirt.jpg" alt="我是图片">
+      <br>
+      我是下一行
+      <p>我是一段描述</p>
+    </div>
+  </div>
+</body>
+</html>
